@@ -1,2 +1,33 @@
-# qti_conversion
-Convert QTI files to text or other useful formats
+# Source: https://github.com/rolfis/qti-convert/tree/main
+* Source code from the `qti-convert` repo of user `rolfis` was slightly modified and then used in this repo.
+* Thank you, `rolfis` -- your code helped meet a teacher's need for converting Canvas content into a MS Word doc!
+
+# qti-convert
+Converts QTI (LMS quiz format) in Canvas export package to other formats. 
+
+This Python code is provided as-is and enhancements are welcome. The goal is to provide a simple script for converting QTI XML files into other formats, like PDF and Word. Even if these quizes are made digital-first, some teachers want to print them out to paper, for which there is no straightforward way today as I know about.
+
+Uses pipenv for package dependencies. Install pipenv with `pip install pipenv` then run `pipenv install` to install needed packages in virtual environment.
+
+Note: This code has only been tested with Canvas export packages. They need to be unzipped first.
+
+Specify the input file using either a relative or absolute path. Ensure the path is correctly set based on your current working directory.
+
+
+## Examples
+
+
+    main.py imsmanifest.xml
+
+Converts the quizes and questions to JSON on STDOUT.
+
+
+    main.py -o quiz.json imsmanifest.xml
+
+Converts the quizes and questions to JSON and writes output to file `quiz.json`.
+
+
+    main.py -f docx imsmanifest.xml
+
+Converts the quizes and questions to Microsoft Word 2007 format (docx) and outputs to file `output.docx`.
+
