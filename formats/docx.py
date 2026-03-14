@@ -41,7 +41,7 @@ def write_file(data, outfile):
                         options = []
                         for option in group['options']:
                             if option['display']:
-                                if 'text' in answer and option['text'] != None:
+                                if 'text' in option and option['text'] != None:
                                     options.append(option['text'])
                                 else:
                                     options.append("---")
