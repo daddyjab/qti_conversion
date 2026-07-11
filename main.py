@@ -93,7 +93,7 @@ if __name__ == "__main__":
     # parser.add_argument("-f", action="store", dest="format", default="json", help="Output format, defaults to JSON.")
     # parser.add_argument("-o", action="store", dest="output", help="Output file.")
     parser.add_argument("-f", action="store", dest="format", default="docx", help="Output format, defaults to MS Word (docx).")
-    parser.add_argument("-o", action="store", dest="output", default="output.docx", help="Output file.")
+    parser.add_argument("-o", action="store", dest="output", default="output.docx", help="Output file, defaults to 'output.docx'.")
     parser.add_argument( "--version", action="version", help="Display version and exit.", version="%(prog)s (version {version})".format(version=__version__))
     parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS, help='Show this help message and exit.')
     args = parser.parse_args()
